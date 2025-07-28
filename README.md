@@ -28,6 +28,32 @@ go build -o ifconfigo
 ./ifconfigo
 ```
 
+### Using Docker
+
+#### Build and run with Docker
+```bash
+# Build the image
+docker build -t ifconfigo .
+
+# Run the container
+docker run -p 8080:8080 ifconfigo
+```
+
+#### Using Docker Compose
+```bash
+# Start the service
+docker-compose up -d
+
+# Stop the service
+docker-compose down
+```
+
+#### Custom port with Docker
+```bash
+# Run on custom port (e.g., 3000)
+docker run -p 3000:8080 ifconfigo ./ifconfigo 3000
+```
+
 ## Testing
 
 Once the server is running, you can test it with:
